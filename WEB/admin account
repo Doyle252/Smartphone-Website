@@ -1,0 +1,10 @@
+Mật khâu và tài khoản admin:
+username: admin
+password: 111
+
+Mật khẩu của user và admin sẽ được mã hóa theo mã SHA1 trước khi lưu vào database
+
+Có thể sử dụng trang web sau để giải mã SHA1:
+https://10015.io/tools/sha1-encrypt-decrypt
+
+Mã khi reset password chỉ có thể sử dụng trong 1 tiếng kể từ lúc gửi mã, sau đấy mã sẽ là không hợp lệ.

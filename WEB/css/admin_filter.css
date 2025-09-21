@@ -1,0 +1,71 @@
+
+ /* Container for radio buttons */
+ .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    }
+
+    /* Styling the radio inputs */
+    .radio-group input[type="radio"] {
+    accent-color: #007BFF; /* Customize radio button color */
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    }
+
+    /* Styling the labels */
+    .radio-group label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    }
+
+    /* Additional styling when the radio button is checked */
+    .radio-group input[type="radio"]:checked + label {
+    color: #007BFF;
+    font-weight: bold;
+    }
+
+/* Filter-form */
+.box-container-admin {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50rem);
+    gap:1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    }
+
+    .box-container-admin h1 {
+       margin-top: 1.5rem;
+    }
+
+    .filter-form {
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        width: 500px;
+    }
+
+    .filter-form .box {
+       padding: 1.5rem;
+       margin-top: 10px;
+       width: 400px;
+       height: 60px;
+       border-radius: 0.5rem;
+       font-size: 2rem;
+    }
+
+    .filter-form .btn {
+       padding: 1rem 2rem;
+       background-color: #333;
+       color: #fff;
+       border: none;
+       cursor: pointer;
+
+       height: 60px;
+    }
+
+    .filter-form .btn:hover {
+       background-color: #555;
+    }

@@ -1,0 +1,394 @@
+/*
+======================
+Facility
+======================
+*/
+
+.facility__section {
+  background-color: var(--primaryColor);
+  padding: 6rem 0;
+}
+
+.facility__contianer {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.facility-img__container svg {
+  width: 3rem;
+  height: 3rem;
+  transition: 1s;
+  perspective: 4000;
+}
+
+.facility__box {
+  text-align: center;
+}
+
+.facility-img__container {
+  position: relative;
+  display: inline-block;
+  line-height: 9.5rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  z-index: 1;
+  margin-bottom: 1.6rem;
+}
+
+.facility-img__container::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0.7rem;
+  background-color: var(--white);
+  z-index: -1;
+}
+
+.facility__box:hover svg {
+  transform: rotateY(180deg);
+  line-height: 9.5rem;
+}
+
+/*
+======================
+Facility Media Query
+======================
+*/
+@media only screen and (max-width: 998px) {
+  .facility__contianer {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .facility__contianer {
+    grid-template-columns: 1fr;
+  }
+
+  .facility-img__container {
+    width: 7rem;
+    height: 7rem;
+    line-height: 8.5rem;
+  }
+
+  .facility__contianer p {
+    font-size: 1.4rem;
+  }
+}
+
+/*
+======================
+Testimonial 
+======================
+*/
+
+.testimonial {
+  position: relative;
+  background: url("../images/testimonial.jpg") center/cover no-repeat;
+  height: 50rem;
+  padding: 5rem 0;
+  z-index: 1;
+  text-align: center;
+  max-width: 100%;
+}
+
+.testimonial::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: -1;
+}
+
+.client__image {
+  margin-bottom: 3rem;
+}
+
+.client__image img {
+  width: 7rem;
+  height: 7rem;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial__container {
+  height: 100%;
+  padding: 1rem;
+}
+
+.testimonial__box {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  color: #ccc;
+}
+
+.testimonial__box p {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 2.5rem;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.client__info h3 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.client__info span {
+  font-size: 1.4rem;
+}
+
+.testimonial .glide__bullets {
+  bottom: -20%;
+}
+
+/*
+======================
+Testimonial Media Query
+======================
+*/
+@media only screen and (max-width: 1200px) {
+  .testimonial__box {
+    height: 100%;
+  }
+
+  .testimonial__box p {
+    width: 90%;
+    margin: 0 auto;
+    line-height: 2.2rem;
+    margin-bottom: 3rem;
+  }
+
+  .client__image {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .testimonial {
+    height: 100%;
+    padding: 4rem 0 5rem;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .testimonial__box {
+    height: 100%;
+  }
+
+  .testimonial__box p {
+    width: 100%;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .client__image {
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial__box span {
+    margin-bottom: 1rem;
+  }
+
+  .testimonial .glide__bullets {
+    bottom: -8%;
+  }
+}
+
+  /*
+  ======================
+  News Section
+  ======================
+  */
+  
+  .news {
+    padding-bottom: 8rem;
+  }
+  
+  .new__card {
+    background-color: var(--primaryColor);
+    width: 95%;
+    margin: 0 auto;
+  }
+  
+  .new__card:not(:last-child) {
+    margin-right: 1rem;
+  }
+  
+  .card__footer {
+    padding: 3rem 1.4rem;
+  }
+  
+  .card__footer h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+  
+  .card__footer span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--black2);
+  }
+  
+  .card__footer p {
+    font-size: 1.5rem;
+    color: var(--black2);
+    margin-bottom: 1.6rem;
+    line-height: 2.7rem;
+  }
+  
+  .card__footer a button,
+  .card__footer a button {
+    display: inline-block;
+    padding: 1.4rem 4rem;
+    border: 1px solid var(--black);
+    color: var(--black);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .card__footer a button:focus {
+    outline: none;
+  }
+  
+  .card__footer a button:hover {
+    border: 1px solid var(--black);
+    color: var(--white);
+    background-color: var(--black);
+  }
+  
+  /*
+  ======================
+  NewsLetter
+  ======================
+  */
+  
+  .newsletter {
+    padding: 6rem 0;
+    border-top: 1px solid var(--primaryColor);
+  }
+  
+  .newsletter__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .newsletter__data h3 {
+    font-size: 2.4rem;
+    font-weight: inherit;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter__data p {
+    font-size: 1.5rem;
+    color: var(--black2);
+  }
+  
+  .newsletter__email {
+    font-size: 1.4rem;
+    display: inline-block;
+    width: 37rem;
+    padding: 1.6rem;
+    background-color: var(--primaryColor);
+    border: none;
+    text-indent: 1rem;
+  }
+  
+  .newsletter__email:focus {
+    outline: none;
+  }
+  
+  .newsletter__link:link,
+  .newsletter__link:visited {
+    display: inline-block;
+    padding: 1.4rem 3rem;
+    margin-left: -0.5rem;
+    background-color: var(--black);
+    color: var(--white);
+    transition: 0.3s;
+  }
+  
+  .newsletter__link:hover {
+    background-color: #000;
+  }
+  
+  /*
+  ======================
+  Newsletter Media Query
+  ======================
+  */
+  @media only screen and (max-width: 998px) {
+    .newsletter {
+      padding: 6rem 4rem;
+    }
+  
+    .newsletter__content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .newsletter__email {
+      width: 45rem;
+    }
+  
+    .newsletter__data {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .newsletter__content {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    .newsletter__email {
+      width: 45rem;
+      display: block;
+      margin-bottom: 1.6rem;
+    }
+  }
+  
+  @media only screen and (max-width: 568px) {
+    .newsletter__email {
+      width: 23rem;
+      font-size: 1.2rem;
+    }
+  
+    .newsletter__data h3 {
+      font-size: 1.6rem;
+    }
+  
+    .newsletter__data p {
+      font-size: 1rem;
+    }
+  
+    .newsletter__link:link,
+    .newsletter__link:visited {
+      padding: 1.2rem 2rem;
+      margin-left: 0;
+    }
+  }
+  
